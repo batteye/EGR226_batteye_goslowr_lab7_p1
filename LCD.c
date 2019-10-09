@@ -41,6 +41,11 @@ void push_byte(uint8_t byte){
 }
 
 void innit_pins(){
+    LCD -> DIR |=(RS|E|D4|D5|D6|D7);\\all output
+    LCD->DIR &=~ D4;
+    LCD->DIR &=~ D5;
+    LCD->DIR &=~ D6;
+    LCD->DIR &=~ D7;
 
 }
 
@@ -51,19 +56,19 @@ void push_nibble(uint8_t nibble){
     LCD->DIR &=~ D7;
     volatile uint8_t a = 0x08 & nibble;
     if(a > 0){
-    `   LCD -> DIR |= D7;
+       LCD -> DIR |= D7;
     }
     a = 0x04 & nibble;
     if(a > 0){
-        `   LCD ->DIR |= D6;
+           LCD ->DIR |= D6;
         }
     a = 0x02 & nibble;
         if(a > 0){
-        `   LCD ->DIR |= D5;
+           LCD ->DIR |= D5;
         }
         a = 0x01 & nibble;
             if(a > 0){
-        `   LCD -> DIR |= D4;
+           LCD -> DIR |= D4;
         }
 
     PulseEnablePin();
