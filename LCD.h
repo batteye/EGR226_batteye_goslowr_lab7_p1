@@ -17,10 +17,11 @@
 #define D7 BIT5
 
 void LCD_innit();
+void innit_pins();
 void write_command(volatile uint8_t command);
 void push_byte(volatile uint8_t byte);
 void push_nibble(volatile uint8_t nibble);
-void PulseEnablePin ();
+void PulseEnablePin();
 void Systick_ms_delay(int j);
 void Systick_us_delay(int j);
 
