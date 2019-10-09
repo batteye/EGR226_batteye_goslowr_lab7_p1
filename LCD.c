@@ -46,6 +46,7 @@ void innit_pins(){
     LCD->DIR &=~ D5;
     LCD->DIR &=~ D6;
     LCD->DIR &=~ D7;
+    LCD->DIR &=~ E;
 
 }
 
