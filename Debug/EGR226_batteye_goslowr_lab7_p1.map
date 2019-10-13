@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v18.1.6                     
 ******************************************************************************
->> Linked Wed Oct  9 11:06:19 2019
+>> Linked Sun Oct 13 16:01:45 2019
 
 OUTPUT FILE NAME:   <EGR226_batteye_goslowr_lab7_p1.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000007c1
